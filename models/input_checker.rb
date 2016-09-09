@@ -1,16 +1,20 @@
 module InputChecker
-case input 
-when regexp digits 5 digits 
-	return that 
-when "bronx"	 
-	return "Bronx"
-when 
-else 
-	method for incorrect input 
+# case input 
+# when regexp digits 5 digits 
+# 	return that 
+# when "bronx"	 
+# 	return "Bronx"
+# when 
+# else 
+# 	method for incorrect input 
 
-		puts "please enter a 5 digit zip or one of Boroughs"
-end		
+# 		puts "please enter a 5 digit zip or one of Boroughs"
+# end		
 
+	# def check_for_quit
+		# Checks if the user's input is 'quit'
+
+	# 
 
 
 end
