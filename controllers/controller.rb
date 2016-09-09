@@ -1,9 +1,10 @@
 class Controller
+	attr_reader :parser, :view, :input_checker
 
 	def initialize(args={})
-		@json_parser = JsonParser.new(url)
-		@view = View.new
-		@input_checker = InputChecker # Module
+		@parser = Parser.new({incident_zip: "11214"})
+		# @view = View.new
+		# @input_checker = InputChecker # Module
 
 		run
 	end
@@ -23,5 +24,6 @@ class Controller
 			# Set output of parse to a variable
 			# View method to display output 'pretty'
 
+		puts parser.parse
 	end
 end
