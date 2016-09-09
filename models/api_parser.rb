@@ -3,13 +3,14 @@
 require 'pry'
 
 class Parser
-	attr_accessor :query_string, :json_string_response
+	attr_accessor :query_string, :json_string_response, :ruby_hash_response
 	attr_reader :incident_zip, :borough
 	def initialize(args={})
 		@incident_zip = args.fetch(:incident_zip)
 		# @borough = args.fetch(:borough) { nil }
 		@query_string = nil
 		@json_string_response = nil
+		@ruby_hash_response = nil
 
 	end
 
@@ -30,5 +31,8 @@ class Parser
 				based_on_borough(self.borough)
 			end
 			self.json_string_response = open(BASE_URL + self.query_string).read
+
+			self.ruby_hash_response = JSON.parse(self.json_string_response)
+
 		end
 end

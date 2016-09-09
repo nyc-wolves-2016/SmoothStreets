@@ -10,7 +10,11 @@ class View
 	end
 
 	def display_output(output)
-		puts output
+			puts "Streets to avoid:"
+		output.each do |line|
+			puts line["street_name"]
+			puts line["cross_street_1"]
+		end
 	end
 
 

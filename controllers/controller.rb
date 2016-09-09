@@ -28,10 +28,14 @@ class Controller
 		checker = InputChecker.mass_check(user_input)
 		response = Parser.new(checker)
 		response.parse(response.incident_zip)
-		binding.pry
-		Street.new(response)
+		# binding.pry
 
+		# response.ruby_hash_response.each do |line|
+		# 	p line
+		# end
+		
+		response = response.ruby_hash_response
+		# binding.pry
 		view.display_output(response)
-
 	end
 end
