@@ -1,24 +1,21 @@
 module InputChecker
 
-	def mass_check(input)
+	def self.mass_check(input)
 		if self.check_for_quit(input)
-			0
-		elsif self.check_for_zip(input)
-			1
-		# elsif self.check_for_borough(input)
-		# 	2
+			false
 		else 
-			3
+			{:incident_zip => input}
 		end
 	end	
 
 	def self.check_for_quit(input)
 		input.downcase == "quit"
 	end
+end
 
-	def self.check_for_zip(input)
-		input.dowcase.match(/\b\d{5}/)
-	end
+	# def self.check_for_zip(input)
+	# 	input.dowcase.match(/\b\d{5}/)
+	# end
 
 	# def self.check
 # case input 
@@ -39,4 +36,3 @@ module InputChecker
 	# 
 
 
-end
